@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* html me pass  */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(238, 238, 238);
+}
+
+header {
+    height: 5rem;
+    /* background-color: lightcoral; */
+}
+
+.titlebar {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+}
+
+.title-img {
+    /* 2.5rem -> 60% */
+    height: 60%;
+    margin-left: 1rem
+}
+
+.title {
+    font-size: 1rem;
+
+
+}
+
+.menu-bar {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+    align-items: center;
+    height: 50%;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu:hover {
+    background-color: lightblue;
+}
+
+.menu-items {
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    top: 1px;
+    width: 9rem;
+    display: none;
+}
+
+.menu:hover .menu-items {
+    display: block;
+}
+
+li {
+    padding: 0.25rem;
+}
+
+.videoInput {
+    display: none;
+}
+
+/* main element */
+main {
+    background-color: black;
+    height: calc(100vh - 8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    height: 100%;
+}
+#speedUp:hover{
+    background-color: grey;
+    color: burlywood;
+}
+#speedDown:hover{
+    background-color: grey;
+    color: burlywood;
+}
+#volumeUp:hover{
+    background-color: grey;
+    color: burlywood;
+}
+#volumeDown:hover{
+    background-color: grey;
+    color: burlywood;
+}
+.video-btn:hover{
+    background-color: aqua;
+}
+/* footer */
+footer {
+    height: 3rem;
+}
+.toast{
+    color:white;
+    font-size: 2rem;
+    position: fixed;
+    top:99px;
+    right: 10px;
+}
