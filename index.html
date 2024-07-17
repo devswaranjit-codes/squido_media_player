@@ -44,10 +44,32 @@
     </header>
     <main id="main"></main>
     <div class="toast"></div>
-    <footer style="margin-left: 5rem;">
-        <i class="fa-solid fa-pause"></i>
-        <i class="fa-solid fa-play"></i>
-        <i class="fa-solid fa-expand" id="fullScreen"></i>
+    <footer>
+        <div class="time-container">
+            <div class="current-time" id="currentTime">--/--/--</div>
+            <div class="time-slider ">
+                <input type="range" value="0" min="0" class="slider" id="slider">
+            </div>
+            <div class="total-time" id="totalTime">--/--/--</div>
+        </div>
+        <div class="menu-btns">
+            <div class="play_pause-container btn" id="playPause">
+            </div>
+            <div class="rest-options">
+                <div class="back-btn btn" id="backBtn">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <div class="placeholder btn" id="stopBtn">
+                    <i class="fas fa-stop"></i>
+                </div>
+                <div class="forward-btn btn" id="forwardBtn">
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="fullscreen-btn btn" id="fullScreen">
+                    <i class="fas fa-expand"></i>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
