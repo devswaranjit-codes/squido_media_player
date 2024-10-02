@@ -6,7 +6,7 @@ const currentTimeElem = document.querySelector("#currentTime");
 const slider = document.querySelector("#slider");
 
 
-let video = ""
+let video = "";
 let duration;
 let timerObj;
 let currentPlayTime = 0;

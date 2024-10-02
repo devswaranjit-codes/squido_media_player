@@ -55,6 +55,7 @@ header {
     top: 1px;
     width: 9rem;
     display: none;
+    cursor:pointer;
 }
 
 .menu:hover .menu-items {
@@ -161,6 +162,7 @@ footer {
 .btn:hover {
     border: 1px solid rgb(7, 93, 133);
     background-color: rgb(221, 244, 250);
+    cursor: pointer;
 }
 
 .menu-btns {
