@@ -1,42 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-
-/* html me pass  */
 body {
     font-family: "Roboto", sans-serif;
     background-color: rgb(238, 238, 238);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 header {
-    height: 5rem;
-    /* background-color: lightcoral; */
+    height: 8vh;  /* Adjusted to make the header smaller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .titlebar {
     height: 50%;
     display: flex;
     align-items: center;
-    gap: 0.2rem;
-
+    gap: 0.5vw; /* Adjusted spacing */
+    padding-left: 1vw;
 }
 
 .title-img {
-    /* 2.5rem -> 60% */
-    height: 60%;
-    margin-left: 1rem
+    height: 4vh;  /* Smaller logo */
 }
 
 .title {
-    font-size: 1rem;
-
-
+    font-size: 1.5vw; /* Smaller title */
 }
 
 .menu-bar {
     display: flex;
-    gap: 1rem;
-    margin-left: 1rem;
+    gap: 1vw;
+    margin-left: 1vw;
     align-items: center;
     height: 50%;
 }
@@ -53,9 +54,9 @@ header {
     background-color: rgb(238, 238, 238);
     position: absolute;
     top: 1px;
-    width: 9rem;
+    width: 12vw;
     display: none;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .menu:hover .menu-items {
@@ -63,81 +64,61 @@ header {
 }
 
 li {
-    padding: 0.25rem;
+    padding: 0.5rem;
 }
 
 .videoInput {
     display: none;
 }
 
-/* main element */
+/* Main video section */
 main {
     background-color: black;
-    height: calc(100vh - 8rem);
+    height: 75vh; /* Keep main section height proportional */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .video {
-    height: 100%;
+    width: 80vw;
+    max-height: 100%;
 }
-#speedUp:hover{
+
+#speedUp:hover,
+#speedDown:hover,
+#volumeUp:hover,
+#volumeDown:hover {
     background-color: grey;
     color: burlywood;
 }
-#speedDown:hover{
-    background-color: grey;
-    color: burlywood;
-}
-#volumeUp:hover{
-    background-color: grey;
-    color: burlywood;
-}
-#volumeDown:hover{
-    background-color: grey;
-    color: burlywood;
-}
-.video-btn:hover{
+
+.video-btn:hover {
     background-color: aqua;
 }
-/* footer */
+
+/* Footer */
 footer {
-    height: 3rem;
-}
-.toast{
-    color:white;
-    font-size: 2rem;
-    position: fixed;
-    top:99px;
-    right: 10px;
-}
-/* footer */
-footer {
-    height: 5rem;
+    height: 8vh;  /* Reduced footer height */
     padding-top: 0.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .time-container {
     display: flex;
-    gap: 1rem;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
 }
 
-.time-container>* {
-    /* outline: 1px solid red; */
-    text-align: center;
-}
-
-.current-time,.total-time {
-    width: 5%;
+.current-time,
+.total-time {
     min-width: 44px;
-
-
+    font-size: 1.2vw; /* Slightly smaller time text */
 }
 
 .time-slider {
-    width: 93%;
+    width: 85vw;
 }
 
 .slider {
@@ -145,8 +126,13 @@ footer {
     opacity: 0.7;
 }
 
- 
-
+.toast {
+    color: white;
+    font-size: 2vw;
+    position: fixed;
+    top: 10vh;
+    right: 2vw;
+}
 
 .btn {
     display: flex;
@@ -155,52 +141,110 @@ footer {
     cursor: pointer;
     background-color: rgb(221, 218, 218);
     border: 1px solid rgb(126, 124, 124);
-    height: 20px;
-    width: 20px;
+    height: 4vh;  /* Smaller button size */
+    width: 4vh;
 }
 
 .btn:hover {
     border: 1px solid rgb(7, 93, 133);
     background-color: rgb(221, 244, 250);
-    cursor: pointer;
 }
 
 .menu-btns {
     display: flex;
-    gap: 0.5rem;
-    margin-left: 2rem;
-    margin-top: 0.5rem;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    
 }
 
 i {
     color: rgba(82, 82, 82, 0.843);
-    font-size: 14px;
+    font-size: 1.2vw; /* Smaller icon size */
 }
 
 .play_pause-container {
-    padding: 7px;
-    height: 25px;
-    width: 25px;
-    padding: 7px;
-
+    height: 4.5vh;
+    width: 4.5vh;
 }
 
 .rest-options {
     display: flex;
-    gap: 0.3rem;
-    align-items: flex-end;
+    gap: 1vw;
 }
 
-@media (max-width: 1000px) {
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: 12vh; /* Slightly larger for mobile */
+    }
+
+    .titlebar {
+        height: auto;
+        gap: 1vw;
+    }
+
+    .title-img {
+        height: 3.5vh; /* Smaller logo for mobile */
+    }
+
+    .title {
+        font-size: 3vw; /* Smaller title for mobile */
+    }
+
+    .menu-bar {
+        justify-content: center;
+        margin-left: 0;
+        gap: 2vw;
+        flex-wrap: wrap;
+    }
+
+    main {
+        height: 65vh; /* Main video section is still responsive */
+    }
+
+    .video {
+        width: 90vw;
+        height: auto;
+    }
+
+    footer {
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        height: 8vh; /* Reduced footer height for mobile */
+    }
+
     .time-slider {
-        width: 75%;
+        width: 80vw;
+    }
+    .time-slider:hover{
+        background-color:red ;
+        opacity: 1;
     }
 
-    .time-container {
-        justify-content: space-evenly;
+    .current-time,
+    .total-time {
+        font-size: 3vw; /* Adjusted font size for mobile */
     }
 
-   
+    .btn {
+        height: 4vh;
+        width: 4vh;
+        color: rebeccapurple;
+    }
+
+    .play_pause-container {
+        height: 4vh;
+        width: 4vh;
+    }
+    .play_pause-container:hover{
+        background-color:crimson;
+        color: burlywood;
+    }
+
+    i {
+        font-size: 3vw;
+    }
 }
